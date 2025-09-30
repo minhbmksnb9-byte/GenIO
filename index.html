@@ -1,61 +1,130 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="main.css">
-        
-    </head>
-    <body style=" z-index: -1; margin: 0; padding: 0; overflow: hidden; position: absolute; width: 100%; height: 100%;">
-        <img src="image.jpg" alt="" width=100% height=100% id="bg">
-        <p id ="container">
-        
-            <b>
-                <p style="top: 20%; left: 50%; font-size: 50px" class="front">
-                    Hỗ trợ làm bài tập IOE
-                    <br>
-                    với AI
-                </p>
-            </b>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>GenIO</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            background: url("image.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
 
-            <a href="" class="front" id="download">DOWNLOAD FOR WINDOW</a>
-            <br>
-            <i class="front" id = "source">""by minhbmksnb9""</i>
-            <br>
-        </p>
+        #container {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-        <p>
-            <table class="front" id="info">
-                <tr>
-                    <td style="text-align: center; width: 70px;">
-                        <img src="icon.png" alt="" width=50 height=50>
-                    </td>
-                    <td style="text-align: left; width: 70px;  border-right: 2px solid white; font-size:30px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><b>GenIO</b></td>
-                    <td style="text-align: center;"><u><b>
-                        <form action="comingsoon.html">
-                            <input type="submit" value="Documents" style="background: none; border: none; color: white; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; cursor: pointer;">
-                        </form>
-                    </b></u></td>
-                    <td style="text-align: center;"><u><b>
-                        <form action="comingsoon.html">
-                            <input type="submit" value="Help" style="background: none; border: none; color: white; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; cursor: pointer;">
-                        </form>
-                    </b></u></td>
-                </tr>
-            </table>
-        </p>
+        #container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-        <p class="front">
-        <b>
-            <p  class="front" id="contact">
-                Facebook:
-                <a href="https://www.facebook.com/binh.minh.nguyen.tu.2024/" style="color: rgb(87, 90, 248); text-decoration: none;">binh.minh.nguyen.tu.2024</a>
-                <br>
-                Youtube:
-                <a href="https://www.youtube.com/@IamNatch-z6b" style="color: rgb(87, 90, 248); text-decoration: none;">@IamNatch-z6b</a>
-                <br>
-            </p>
-        </b>
-    </p>
+        #download {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
+        #download:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
 
-    </body>
+        #source {
+            display: block;
+            margin-top: 10px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        #info {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 0;
+        }
+
+        #info td {
+            padding: 0 15px;
+        }
+
+        #contact {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        #contact a {
+            color: rgb(87, 90, 248);
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <table id="info" class="front">
+        <tr>
+            <td style="width:70px; text-align:center;">
+                <img src="icon.png" alt="Logo" width="50" height="50">
+            </td>
+            <td style="border-right:2px solid white; font-size:30px;"><b>GenIO</b></td>
+            <td>
+                <form action="comingsoon.html">
+                    <input type="submit" value="Documents" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">
+                </form>
+            </td>
+            <td>
+                <form action="comingsoon.html">
+                    <input type="submit" value="Help" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">
+                </form>
+            </td>
+            <td>
+                <form action="about.html">
+                    <input type="submit" value="About" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Content -->
+    <div id="container">
+        <h1>Hỗ trợ làm bài tập IOE <br> với AI</h1>
+        <a href="" id="download">DOWNLOAD FOR WINDOWS</a>
+        <span id="source">by minhbmksnb9</span>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        Facebook:
+        <a href="https://www.facebook.com/binh.minh.nguyen.tu.2024/">binh.minh.nguyen.tu.2024</a><br>
+        Youtube:
+        <a href="https://www.youtube.com/@IamNatch-z6b">@IamNatch-z6b</a>
+    </div>
+
+</body>
 </html>
